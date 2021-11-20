@@ -7,7 +7,7 @@ rm -f compressed_data/tng-data-grammar.tar.gz
 tar -czvf compressed_data/tng-data-grammar.tar.gz data/
 
 # clean
-rm -v !(__WARNING__.md) -rf data/
+find data/* | grep -v __WARNING__ | xargs rm -rf
 
 # push
 git add .
